@@ -14,7 +14,7 @@
 	<name>ms-with-kafka</name>
 	<description>Demo project for Spring Boot with Kafka</description>
 	<properties>
-		<java.version>12</java.version>
+		<java.version>8</java.version>
 		<spring-cloud-services.version>2.4.1</spring-cloud-services.version>
 		<spring-cloud.version>2020.0.2</spring-cloud.version>
 	</properties>
