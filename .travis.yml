@@ -12,6 +12,7 @@ before_script:
 
 script:
   - mvn clean test verify
+  - docker build -t joshikeyur/ms-with-kafka .
 
 after_script:
   - echo After scripts
