@@ -14,7 +14,7 @@ script:
   - mvn clean test verify
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t joshikeyur/ms-with-kafka .
-  - docker run --rm -it amazon/aws-cli --version
+  - docker run --rm -it -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY -e AWS_DEFAULT_REGION=ap-southeast-2 amazon/aws-cli --version
 
 after_script:
   - echo After scripts
