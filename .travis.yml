@@ -12,6 +12,7 @@ before_script:
 
 script:
   - mvn clean test verify
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t joshikeyur/ms-with-kafka .
 
 after_script:
