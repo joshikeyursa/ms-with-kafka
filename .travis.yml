@@ -1,1 +1,17 @@
 language: java
+
+services:
+  - docker
+
+before_install:
+  - echo Before install
+  - docker version
+
+before_script:
+  - echo before scripts
+
+script:
+  - mvn clean test verify
+
+after_script:
+  - echo After scripts
